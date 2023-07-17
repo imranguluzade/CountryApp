@@ -1,11 +1,12 @@
 import React from 'react'
 
-const Country = () => {
+const Country = (props) => {
   return (
     <div className='country'>
-        <h4>Name:</h4>
-        <p>Region:</p>
-        <p>Capital:</p>
+        <img src={props.props?.flags.svg}/>
+        <h4>Name:{props.props?.name?.common}</h4>
+        <p>Region: {props.props?.region}</p>
+        <p>Capital: {props.props?.capital}</p>
     </div>
   )
 }
