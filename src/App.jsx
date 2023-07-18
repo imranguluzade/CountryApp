@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import Search from './components/Search'
 import Sort from "./components/Sort";
 import Countries from './components/Countries';
-import Country from './components/Country';
 import Header from './components/Header';
 
 
 const App = () => {
-  const [search, setSearch]= useState("")
+  const [search, setSearch] = useState("")
+  const [sort, setSort] = useState("")
 
 
   return (
@@ -15,10 +15,10 @@ const App = () => {
       <Header />
       <div className='hero-wrapper'>
         <div className='filter-wrapper'>
-          <Search search = {search} setSearch = {setSearch}/>
-          <Sort />
+          <Search search={search} setSearch={setSearch} />
+          <Sort setSort = {setSort}/>
         </div>
-        <Countries />
+        <Countries search={search} />
       </div>
     </div>
   )
