@@ -18,7 +18,7 @@ const App = () => {
           <Search search={search} setSearch={setSearch} />
           <Sort setSort = {setSort}/>
         </div>
-        <Countries search={search} />
+        <Countries search={search} sort = {sort}  />
       </div>
     </div>
   )
