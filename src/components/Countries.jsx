@@ -6,6 +6,7 @@ const Countries = ({ search, sort }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  console.log("everything is ok this is test console");
 
   useEffect(() => {
     const getCountries = async () => {
